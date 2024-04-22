@@ -11,5 +11,11 @@ RUN curl -L -o /opt/install.sh  https://get.k3s.io
 RUN chmod +x /opt/install.sh
 
 # Download k3s binary
-RUN curl -L -o /usr/local/bin/k3s "https://github.com/k3s-io/k3s/releases/download/${K3S_VERSION}/k3s"
+RUN curl -L -o /usr/local/bin/k3s "https://github.com/ZhouJianMS/k3s/releases/download/${K3S_VERSION}/k3s"
 RUN chmod +x /usr/local/bin/k3s
+
+RUN curl -L -o /usr/local/bin/etcdctl "https://github.com/ZhouJianMS/k3s/releases/download/${K3S_VERSION}/etcdctl"
+RUN chmod +x /usr/local/bin/etcdctl
+
+RUN curl -L -o /usr/local/bin/etcdutl "https://github.com/ZhouJianMS/k3s/releases/download/${K3S_VERSION}/etcdutl"
+RUN chmod +x /usr/local/bin/etcdutl
